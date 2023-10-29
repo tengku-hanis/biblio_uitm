@@ -10,9 +10,7 @@ theme_set(theme_bw())
 
 # Data --------------------------------------------------------------------
 
-link <- "https://raw.githubusercontent.com/tengku-hanis/bibliometrics-Jan18-2022/main/mbc.bib"
-dat <- convert2df(file = link, dbsource = "scopus", format = "bibtex")
-
+dat <- convert2df(file = "wos.bib", dbsource = "wos", format = "bibtex")
 
 # Miscellaneous metrics ----------------------------------------------------
 

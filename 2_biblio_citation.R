@@ -15,28 +15,21 @@ data("bibtag"); View(bibtag)
 
 # Data --------------------------------------------------------------------
 
-link <- "https://raw.githubusercontent.com/tengku-hanis/bibliometrics-Jan18-2022/main/mbc.bib"
-dat <- convert2df(file = link, dbsource = "scopus", format = "bibtex")
+dat <- convert2df(file = "wos.bib", dbsource = "wos", format = "bibtex")
 names(dat)
 dim(dat)
 
 
 # NAs ---------------------------------------------------------------------
 
-dat %>% 
-  select(TI, AB) %>% 
-  summarise(TI = sum(is.na(TI)), AB = sum(is.na(AB)))
-
-dat %>% 
-  filter(is.na(AB)) %>% 
-  select(TI, AB) %>% 
-  slice(1:3) 
+missingData(dat)
 
 
 # Duplicate ---------------------------------------------------------------
 
 dat %>% 
   select(DI) %>%
+  na.omit(DI) %>% 
   summarise(DI = sum(duplicated(DI)))
 
 
@@ -57,7 +50,7 @@ P$AverTotCitperYear
 # Funded research ---------------------------------------------------------
 
 table(is.na(dat$FU)) %>% 
-  prop.table()*100 #31.8% funded
+  prop.table()*100 #18% funded
 
 
 # Citation related metrics  -----------------------------------------------
