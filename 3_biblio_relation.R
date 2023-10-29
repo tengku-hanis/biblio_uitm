@@ -1,4 +1,4 @@
-# Bibliometric analysis - relationship related metrics
+# Bibliometric analysis - relationship-related metrics (science mapping)
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
 # Oct31, 2023
 

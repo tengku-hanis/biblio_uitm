@@ -1,4 +1,4 @@
-# Bibliometric analysis - theory-related metrics
+# Bibliometric analysis - theory/law-related metrics
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
 # Oct31, 2023
 

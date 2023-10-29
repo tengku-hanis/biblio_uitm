@@ -1,4 +1,4 @@
-# Bibliometric analysis - theory-related metrics
+# Bibliometric analysis - other measures
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
 # Oct31, 2023
 
@@ -22,7 +22,7 @@ plot(Map$map)
 
 Map$documentToClusters %>% view()
 Map$documentToClusters %>% 
-  filter(Assigned_cluster == "genetics") %>% 
+  filter(Assigned_cluster == "tamoxifen") %>% 
   select(TI, DI)
 
 
@@ -30,7 +30,6 @@ Map$documentToClusters %>%
 
 trend_kw <- fieldByYear(dat, field = "ID", timespan = c(2010,2019),
                         min.freq = 1, n.items = 5, graph = TRUE) 
-trend_kw$graph 
 
 # Another way to plot trending keywords
 dat_kw <- trend_kw$df_graph
@@ -50,7 +49,7 @@ dom
 ?dominance #detail how dominance factor calculated
 
 ## 4) Top-author productivity over time ----
-# dat <- convert2df(file = link, dbsource = "scopus", format = "bibtex")
+
 topAU <- authorProdOverTime(dat, k=10)
 topAU$graph +
   theme_bw()

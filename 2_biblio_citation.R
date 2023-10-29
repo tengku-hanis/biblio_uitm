@@ -1,4 +1,4 @@
-# Bibliometric analysis - citation related metrics
+# Bibliometric analysis - performance analysis-related metrics
 # Tengku Hanis (https://tengkuhanis.netlify.app/)
 # Oct31, 2023
 
