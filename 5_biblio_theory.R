@@ -25,7 +25,7 @@ L$Beta #beta coeeficient of Lotka's law
 L$R2 #GOF of Lotka's law (r^2)
 
 # P value of K-S two sample test
-L$p.value #there is a sig diff btwn observed and theoretical distribut.
+L$p.value #there is no sig diff btwn observed and theoretical distribut.
 
 # Theoretical distribution with Beta = 2
 Theoretical <- 10^(log10(L$C)-2*log10(L$AuthorProd[,1]))
